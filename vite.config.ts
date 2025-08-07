@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/devraj-distillery/', // This is correct for your repo
+  base: '/devraj_distillery/', // FIXED: underscore not dash
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
