@@ -13,7 +13,7 @@ const Product = () => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   const MIN_ZOOM = 0.8;
-  const MAX_ZOOM = 3.5;
+  const MAX_ZOOM = 3.5; 
   const ZOOM_STEP = 0.3;
 
   const handleZoomIn = () => {
@@ -91,8 +91,8 @@ const Product = () => {
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            A masterpiece of blending artistry, where premium grain spirits meet carefully aged malts
-          </p>
+  A masterpiece of blending artistry, where premium grain spirits meet carefully aged malts
+</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
