@@ -1,27 +1,36 @@
 import React from 'react';
-import { Droplets, Wheat, Squirrel as Barrel, Clock } from 'lucide-react';
+import { Droplets, Wheat, Clock } from 'lucide-react';
+import distillationProcess from '../assets/images/craftsmanship/distillation-process.jpeg';
+import waterSource from '../assets/images/craftsmanship/water-source.jpeg';
+import grainSelection from '../assets/images/craftsmanship/grain-selection.jpeg';
+import barrelAging from '../assets/images/craftsmanship/barrel-aging.jpeg';
+import masterBlending from '../assets/images/craftsmanship/master-blending.jpeg';
 
 const Craftsmanship = () => {
   const steps = [
     {
       icon: <Droplets className="text-blue-400" size={32} />,
       title: "Pure Water Selection",
-      description: "We source the purest water from natural springs, ensuring the perfect foundation for our whisky."
+      description: "We source the purest water from natural springs, ensuring the perfect foundation for our whisky.",
+      image: waterSource
     },
     {
       icon: <Wheat className="text-yellow-400" size={32} />,
       title: "Premium Grain Selection",
-      description: "Only the finest grains are chosen, each batch carefully inspected for quality and consistency."
+      description: "Only the finest grains are chosen, each batch carefully inspected for quality and consistency.",
+      image: grainSelection
     },
     {
-      icon: <Barrel className="text-orange-400" size={32} />,
+      icon: <Clock className="text-orange-400" size={32} />,
       title: "Oak Barrel Aging",
-      description: "Our spirits mature in premium oak barrels, developing complex flavors and rich character over time."
+      description: "Our spirits mature in premium oak barrels, developing complex flavors and rich character over time.",
+      image: barrelAging
     },
     {
       icon: <Clock className="text-green-400" size={32} />,
       title: "Master Blending",
-      description: "Expert craftsmen blend aged spirits with precision, creating the perfect harmony of flavors."
+      description: "Expert craftsmen blend aged spirits with precision, creating the perfect harmony of flavors.",
+      image: masterBlending
     }
   ];
 
@@ -40,15 +49,21 @@ const Craftsmanship = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {steps.map((step, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-gray-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-700 transition-colors duration-300">
-                {step.icon}
+            <div key={index} className="text-center group relative">
+              <div className="relative overflow-hidden rounded-xl mb-4">
+                <img 
+                  src={step.image} 
+                  alt={step.title}
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <div className="bg-gray-800/80 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center">
+                    {step.icon}
+                  </div>
+                </div>
               </div>
               <h3 className="font-playfair text-xl mb-3">{step.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-gray-600 transform translate-y-1/2"></div>
-              )}
             </div>
           ))}
         </div>
@@ -69,12 +84,13 @@ const Craftsmanship = () => {
           </div>
           
           <div className="relative">
-            <img 
-              src="https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop"
-              alt="Distillation process"
-              className="rounded-lg shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl overflow-hidden">
+              <img 
+                src={distillationProcess} 
+                alt="Distillation Process at Devraj Distillery" 
+                className="w-full h-64 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
         </div>
       </div>

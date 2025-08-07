@@ -1,35 +1,41 @@
 import React from 'react';
+import galleryWhiskyPouring from '../assets/images/gallery/gallery-whisky-pouring.png';
+import galleryBottles from '../assets/images/gallery/gallery-bottles.png';
+import galleryBottles2 from '../assets/images/gallery/gallery-bottles-2.png';
+import galleryBottles3 from '../assets/images/gallery/gallery-bottles-3.png';
+import galleryProduction from '../assets/images/gallery/gallery-production.png';
+import galleryBottling from '../assets/images/gallery/gallery-bottling.png';
 
 const Gallery = () => {
   const images = [
     {
-      src: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Whisky pouring",
+      src: galleryWhiskyPouring,
+      alt: "Premium whisky pouring into glass",
       category: "Lifestyle"
     },
     {
-      src: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Premium bottles",
+      src: galleryBottles,
+      alt: "DEVRAJ premium bottles collection",
       category: "Product"
     },
     {
-      src: "https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Distillery barrels",
-      category: "Distillery"
+      src: galleryBottles2,
+      alt: "DEVRAJ luxury bottle showcase",
+      category: "Product"
     },
     {
-      src: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Bar celebration",
-      category: "Lifestyle"
+      src: galleryBottles3,
+      alt: "Premium DEVRAJ bottle display",
+      category: "Product"
     },
     {
-      src: "https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Distillation equipment",
+      src: galleryProduction,
+      alt: "Distillation equipment and production process",
       category: "Process"
     },
     {
-      src: "https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-      alt: "Bottling line",
+      src: galleryBottling,
+      alt: "Precision bottling line at Devraj Distillery",
       category: "Production"
     }
   ];

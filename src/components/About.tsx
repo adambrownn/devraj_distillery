@@ -1,5 +1,7 @@
 import React from 'react';
 import { Calendar, Award, Users } from 'lucide-react';
+import distilleryExterior from '../assets/images/about/distillery-exterior.jpeg';
+import masterDistiller from '../assets/images/about/master-distiller.jpeg';
 
 const About = () => {
   return (
@@ -29,7 +31,7 @@ const About = () => {
               <div className="text-center p-4 bg-gray-800 rounded-lg">
                 <Award className="text-yellow-400 mx-auto mb-2" size={32} />
                 <h4 className="font-semibold mb-1">Premium Quality</h4>
-                <p className="text-gray-400 text-sm">Award-winning spirits</p>
+                <p className="text-gray-400 text-sm">Reward of Patience</p>
               </div>
               <div className="text-center p-4 bg-gray-800 rounded-lg">
                 <Users className="text-yellow-400 mx-auto mb-2" size={32} />
@@ -45,16 +47,20 @@ const About = () => {
           
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <img 
-                src="https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
-                alt="Distillery barrels"
-                className="rounded-lg shadow-lg"
-              />
-              <img 
-                src="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"
-                alt="Distillery interior"
-                className="rounded-lg shadow-lg mt-8"
-              />
+              <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-lg h-64 overflow-hidden">
+                <img 
+                  src={distilleryExterior} 
+                  alt="Devraj Distillery Exterior" 
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg h-64 overflow-hidden mt-8">
+                <img 
+                  src={masterDistiller} 
+                  alt="Master Distiller Process" 
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                />
+              </div>
             </div>
             <div className="absolute -top-4 -left-4 w-24 h-24 border-2 border-yellow-400 rounded-lg"></div>
             <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-yellow-400 rounded-lg opacity-20"></div>
